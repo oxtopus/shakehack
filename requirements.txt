@@ -1,0 +1,4 @@
+gevent
+socketio
+redis
+numpy
