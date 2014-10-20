@@ -62,3 +62,8 @@ left to do to add value.  Here's a sampling of some ideas:
 - [ ] Split data into training and test data based on variety of factors
       (bounding box, time, magnitude, etc.), save model on trained data set,
       load and replay new data
+- [ ] Add a listener to
+      http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php for
+      real-time(ish) updates
+- [ ] Display only a buffer of recent events rather than all accumulated.
+      Maybe make the buffer size dynamic based on moving average.
