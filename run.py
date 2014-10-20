@@ -56,7 +56,7 @@ scores=deque(numpy.ones(WINDOWSIZE), maxlen=WINDOWSIZE)
 
 r = redis.Redis()
 
-for earthquake in earthquakes:
+for earthquake in reversed(earthquakes):
 
   x = int(10000 * abs(float(earthquake.longitude) - minLongitude))
   y = int(10000 * abs(float(earthquake.latitude) - minLatitude))
