@@ -76,7 +76,8 @@ for earthquake in reversed(earthquakes):
             "lng": earthquake.longitude,
             "score": anomalyScore,
             "mag": earthquake.mag,
-            "mean": (numpy.mean(scores), WINDOWSIZE)}
+            "mean": (numpy.mean(scores), WINDOWSIZE),
+            "timestamp": earthquake.time}
 
     r.publish("nupic", json.dumps(data))
     print data

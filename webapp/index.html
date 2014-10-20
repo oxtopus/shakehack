@@ -49,6 +49,7 @@
           socket.on('nupic_data', function(data) {
             obj = $.parseJSON(data.data)
             if(obj){
+              console.log(obj)
               var myLatlng = new google.maps.LatLng(obj.lat, obj.lng)
               var color = gradient[Math.floor(10*parseFloat(obj.score))]
               var marker = new google.maps.Marker({position: myLatlng,
