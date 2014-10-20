@@ -5,8 +5,8 @@ Fall 2014 NuPIC Hackathon
 ![Earthquakes in California](http://oxtopus.github.io/shakehack/map.jpg "Earthquakes in California")
 
 - Colors map to anomaly score
-  - Red/Black: High anomaly score
-  - Bright Green: Low anomaly score
+  - Red: High anomaly score
+  - Green: Low anomaly score
 - Size of dot maps to magnitude
 - 10 years of earthquake data (lat, long, magnitude) for the 1000km radius surrounding the Pinger, In. headquarters in San Jose, CA.
 - Used coordinate encoder
