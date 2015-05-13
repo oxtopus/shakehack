@@ -13,7 +13,9 @@ import redis
 class NupicNamespace(BaseNamespace, BroadcastMixin):
   def recv_connect(self):
     def sendNupic():
-      r = redis.Redis()
+      r = redis.Redis(host=os.environ.get("REDIS_HOST", "127.0.0.1"),
+                      port=int(os.environ.get("REDIS_PORT", 6379)),
+                      db=int(os.environ.get("REDIS_DB", 0)))
 
       ps_obj=r.pubsub()
       ps_obj.subscribe("nupic")

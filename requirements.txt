@@ -1,4 +1,4 @@
 gevent
-socketio
+gevent-socketio
 redis
 numpy
