@@ -82,9 +82,10 @@ for n, earthquake in enumerate(reversed(earthquakes)):
                              modelInput["event"],
                              anomalyScore])
 
-    likelihood = anomalyLikelihood.anomalyProbability(event,
-                                                      anomalyScore,
-                                                      modelInput["timestamp"])
+    likelihood = anomalyLikelihood.anomalyProbability(
+      event[0] + numpy.array([event[1]]),
+      anomalyScore,
+      modelInput["timestamp"])
 
     data = {"lat": earthquake.latitude,
             "lng": earthquake.longitude,
